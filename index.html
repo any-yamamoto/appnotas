@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checklist</title>
+    <link rel="stylesheet" href="jqm/jquery.mobile-1.4.5.css" />
+    <link rel="stylesheet" href="css/tema.min.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="jqm/jquery-1.12.3.min.js"></script>
+    <script src="jqm/jquery.mobile-1.4.5.js"></script>
+  </head>
+  <body>
+    <div data-role="page" id="home">
+      <div data-role="header" id="encabezado">
+        <h1>HOME NOTE</h1>
+        <a
+          href="#"
+          id="todas"
+          data-role="icon"
+          data-icon="delete"
+          data-iconpos="notext"
+          class="
+            ui-btn
+            ui-btn-left
+            ui-shadow
+            ui-corner-all
+            ui-icon-minus
+            ui-btn-icon-notext
+            ui-btn-inline
+            ui-nodisc-icon
+          "
+          >eliminar notas</a
+        >
+        <a
+          href="#"
+          id="cambiar"
+          data-role="icon"
+          data-icon="power"
+          data-iconpos="notext"
+          class="
+            ui-btn
+            ui-btn-left
+            ui-shadow
+            ui-corner-all
+            ui-icon-arrow-d
+            ui-btn-icon-notext
+            ui-btn-inline
+            ui-nodisc-icon
+          "
+          style="left: 38px"
+          onclick="darkmode()"
+          >modo oscuro</a
+        >
+        <a
+          href="#nueva"
+          data-role="button"
+          data-icon="plus"
+          data-iconpos="notext"
+          class="
+            ui-btn
+            ui-btn-right
+            ui-shadow
+            ui-corner-all
+            ui-icon-plus
+            ui-btn-icon-notext
+            ui-btn-inline
+            ui-nodisc-icon
+           
+          "
+          >nueva</a
+        >
+        <a
+          href="#info"
+          data-rel="popup"
+          data-icon="info"
+          data-iconpos="notext"
+          data-position-to="window"
+          class="
+            ui-btn
+            ui-btn-right
+            ui-corner-all
+            ui-shadow
+            ui-btn-inline
+            ui-shadow
+            ui-corner-all
+            ui-icon-info
+            ui-btn-icon-notext
+            ui-nodisc-icon
+          "
+          style="right: 38px"
+          >info</a
+        >
+        <div data-role="popup" class="ui-content" id="info">
+          <a
+            href="#"
+            data-icon="star"
+            data-rel="back"
+            id="fondo-boton"
+            class="
+              ui-btn
+              ui-corner-all
+              ui-shadow
+              ui-btn-a
+              ui-icon-star
+              ui-btn-icon-notext
+              ui-btn-right
+              ui-nodisc-icon
+            "
+            >Close</a
+          >
+          <h3>Integrantes</h3>
+          <p>Valentina Capra</p>
+          <p></p>
+          <p>Julieta Izzo</p>
+          <p>Ana Yamamoto</p>
+          <h3>Datos</h3>
+          <p>Diseño Multimedial</p>
+          <p>Desarrollo de Aplicaciones</p>
+          <p>Turno Tarde</p>
+          <p>DMTA5</p>
+          <p>2021</p>
+          <img src="img/grupo.jpeg" alt="grupal" />
+        </div>
+      </div>
+      <div role="main" class="ui-content">
+        <!-- <div id="msj-eliminar"></div> -->
+        <div id="notas"></div>
+      </div>
+    </div>
+
+    <!--nueva nota -->
+    <div data-role="page" id="nueva">
+      <div data-role="header" id="encabezado">
+        <h1>NUEVA NOTA</h1>
+        <a
+          href="#"
+          data-rel="back"
+          class="
+            ui-btn
+            ui-shadow
+            ui-corner-all
+            ui-icon-back
+            ui-btn-icon-notext
+            ui-btn-inline
+          "
+          >volver</a
+        >
+      </div>
+      <div role="main" class="ui-content">
+        <div class="temas" data-role="" data-type="horizontal">
+          <a
+          href="#"
+          data-role="button"
+          data-inline="true"
+          class="ui-state-persist rojo"
+          data-shadow="false"
+          id="rojo"
+          ></a
+        >
+          <a
+            href="#"
+            data-role="button"
+            data-inline="true"
+            class="ui-state-persist rosa"
+            data-shadow="false"
+            id="rosa"
+            ></a
+          >
+          <a
+            href="#"
+            data-role="button"
+            data-inline="true"
+            class="ui-state-persist amarillo"
+            data-shadow="false"
+            id="amarillo"
+            ></a
+          >
+          <a
+            href="#"
+            data-role="button"
+            data-inline="true"
+            class="ui-state-persist verde"
+            data-shadow="false"
+            id="verde"
+            ></a
+          >
+          <a
+            href="#"
+            data-role="button"
+            data-inline="true"
+            class="ui-state-persist azul"
+            data-shadow="false"
+            id="azul"
+            ></a
+          >
+        </div>
+        <form>
+          <input
+            type="text"
+            id="titulo"
+            required
+            placeholder="Titulo"
+          />
+          <input
+            type="text"
+            id="contenido"
+            required
+            placeholder="Contenido..."
+          />
+          <a href="#"  data-theme="b" data-role="button" data-inline="true" data-rel="back"
+            >cancelar</a
+          >
+          <input
+            type="submit"
+            value="guardar"
+            data-inline="true"
+            data-theme="b"
+          />
+        </form>
+      </div>
+    </div>
+
+    <!-- editar -->
+    <div data-role="page" id="editar">
+      <div data-role="header" id="encabezado">
+        <h1>Editar nota</h1>
+        <a
+          href="#"
+          data-rel="back"
+          class="
+            ui-btn
+            ui-shadow
+            ui-corner-all
+            ui-icon-back
+            ui-btn-icon-notext
+            ui-btn-inline
+          "
+          >volver</a
+        >
+      </div>
+      <div role="main" class="ui-content">
+        <div class="temas" data-role="" data-type="horizontal">
+            <a
+            href="#"
+            data-role="button"
+            data-inline="true"
+            class="ui-state-persist rojo"
+            data-shadow="false"
+            id="rojo"
+            ></a
+          >
+            <a
+              href="#"
+              data-role="button"
+              data-inline="true"
+              class="ui-state-persist rosa"
+              data-shadow="false"
+              id="rosa"
+              ></a
+            >
+            <a
+              href="#"
+              data-role="button"
+              data-inline="true"
+              class="ui-state-persist amarillo"
+              data-shadow="false"
+              id="amarillo"
+              ></a
+            >
+            <a
+              href="#"
+              data-role="button"
+              data-inline="true"
+              class="ui-state-persist verde"
+              data-shadow="false"
+              id="verde"
+              ></a
+            >
+            <a
+              href="#"
+              data-role="button"
+              data-inline="true"
+              class="ui-state-persist azul"
+              data-shadow="false"
+              id="azul"
+              ></a
+            >
+          </div>
+        <form>
+          <input
+            type="text"
+            id="editartitulo"
+            required
+            placeholder="Titulo"
+          />
+          <input
+            type="text"
+            id="editarcontenido"
+            required
+            placeholder="Contenido..."
+          />
+          <input
+            type="submit"
+            value="guardar"
+            data-inline="true"
+            data-theme="b"
+          />
+        </form>
+      </div>
+    </div>
+
+    <script src="js/javascript.js"></script>
+  </body>
+</html>

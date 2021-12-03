@@ -1,0 +1,213 @@
+body {
+  text-shadow: none;
+  font-family: "Rubik", sans-serif;
+}
+#encabezado {
+  background-color: #29272a;
+  font-family: "Rubik", sans-serif;
+  text-shadow: none;
+  color: #eeeeee;
+}
+input {
+  font-family: "Rubik", sans-serif;
+}
+
+.ui-icon-info:hover:after {
+  background-color: #c0efcaa9 !important;
+}
+.ui-icon-delete:hover:after {
+  background-color: #c0efcaa9 !important;
+}
+.ui-icon-power:hover:after {
+  background-color: #c0efcaa9 !important;
+}
+.ui-icon-plus:hover:after {
+  background-color: #c0efcaa9 !important;
+}
+.ui-icon-:hover:after {
+  background-color: #c0efcaa9 !important;
+}
+
+.ui-page {
+  background-color: #eeeeee;
+  font-family: "Rubik", sans-serif;
+}
+.nota {
+  background-color: #FEF6B2;
+  border-radius: 15px;
+  padding: 15px 15px 3rem 15px;
+  box-shadow: 7px 7px rgba(56, 56, 56, 0.411);
+  text-shadow: none;
+}
+.color {
+  background-color: #FEF6B2;
+}
+.nota h2 {
+  color: #29272a;
+  text-transform: uppercase;
+  margin: 2px;
+  font-weight: 800;
+}
+.nota p {
+  text-align: justify;
+}
+.nota a {
+  border-radius: 50%;
+  display: block;
+  float: right;
+}
+div.nota {
+  margin: 15px;
+}
+.check {
+  padding: 6px;
+}
+.edit {
+  padding: 6px;
+}
+.delete {
+  padding: 6px;
+}
+
+.rojo:focus {
+  border: #ff7171a9 2px solid !important;
+}
+.rosa:focus {
+  border: #ff6feca9 2px solid !important;
+}
+.amarillo:focus {
+  border: #fffd72a9 2px solid !important;
+}
+.verde:focus {
+  border: #7bff97a9 2px solid !important;
+}
+.azul:focus {
+  border: #7982ffa9 2px solid !important;
+}
+.rojo {
+  background-color: #ff7171a9 !important;
+}
+.rosa {
+  background-color: #ff6feca9 !important;
+}
+.amarillo {
+  background-color: #fffd72a9 !important;
+}
+.verde {
+  background-color: #7bff97a9 !important;
+}
+.azul {
+  background-color: #7982ffa9 !important;
+}
+div .ui-btn {
+  border-style: none;
+}
+.temas {
+  text-align: end;
+}
+form {
+  text-align: center;
+}
+.ui-btn {
+  font-family: "Work Sans", sans-serif;
+}
+h5 {
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+.edit {
+  text-align: right;
+}
+
+.delete {
+  text-align: right;
+}
+.display {
+  display: none;
+}
+
+.ui-page-theme-a .ui-btn,
+html .ui-bar-a .ui-btn,
+html .ui-body-a .ui-btn,
+html body .ui-group-theme-a .ui-btn,
+html head + body .ui-btn.ui-btn-a,
+.ui-page-theme-a .ui-btn:visited,
+html .ui-bar-a .ui-btn:visited,
+html .ui-body-a .ui-btn:visited,
+html body .ui-group-theme-a .ui-btn:visited,
+html head + body .ui-btn.ui-btn-a:visited {
+  background-color: #c0efca00;
+}
+.ui-page-theme-a .ui-btn,
+html .ui-bar-a .ui-btn,
+html .ui-body-a .ui-btn,
+html body .ui-group-theme-a .ui-btn,
+html head + body .ui-btn.ui-btn-a,
+.ui-page-theme-a .ui-btn:active,
+html .ui-bar-a .ui-btn:active,
+html .ui-body-a .ui-btn:active,
+html body .ui-group-theme-a .ui-btn:active,
+html head + body .ui-btn.ui-btn-a:active {
+  background-color: #c0efca00;
+}
+
+#fondo-boton {
+  background-color: #29272a;
+}
+
+.ui-icon-info:after {
+  background-image: url("../img/info_ver.png");
+}
+.ui-icon-info:hover::after {
+  background-image: url("../img/info.png");
+}
+
+.ui-icon-delete:after {
+  background-image: url("../img/eliminar_ver_1.png");
+}
+.ui-icon-delete:hover {
+  background-color: #c0efcaa9;
+}
+.ui-icon-delete:hover::after {
+  background-image: url("../img/eliminar_1.png");
+  background-color: #c0efcaa9;
+}
+
+.ui-icon-power:after {
+  background-image: url("../img/oscuro_ver.png");
+}
+.ui-icon-power:hover::after {
+  background-image: url("../img/oscuro.png");
+}
+
+.ui-icon-plus:after {
+  background-image: url("../img/añadir_ver.png");
+}
+.ui-icon-plus:hover::after {
+  background-image: url("../img/añadir.png");
+}
+
+.ui-icon-back:after {
+  background-image: url("../img/atras_ver.png");
+}
+.ui-icon-back:hover::after {
+  background-image: url("../img/atras.png");
+}
+.ui-icon-star:after {
+  background-image: url("../img/cerrar_ver.png");
+}
+.ui-icon-star:hover::after {
+  background-image: url("../img/cerrar.png");
+  background-color: #c0efcaa9;
+}
+.dark-mode .ui-page {
+  background-color: #3e3e3e;
+}
+
+.dark-mode .ui-input-text input,
+.ui-input-search input {
+  background-color: rgb(181, 181, 181);
+  text-shadow: none;
+  color: #000000;
+}
